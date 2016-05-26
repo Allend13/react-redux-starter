@@ -1,11 +1,20 @@
 {
-  "name": "BidRush",
-  "version": "2.0.0",
-  "description": "BidRush game",
+  "name": "AllensReactReduxWebpackStarter",
+  "version": "1.0.0",
+  "description": "Allen's React/Redux/Webpack starter",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BidWin/bidwingame-admin-frontend.git"
+    "url": "https://github.com/Allend13/react-redux-webpack-starter.git"
   },
+  "keywords": [
+    "React",
+    "Redux",
+    "Webpack",
+    "ES6",
+    "Babel",
+    "Eslint",
+    "LESS",
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo 'No tests at the moment' && exit 0",
