@@ -5,14 +5,14 @@ import DevTools from '../devtools'
 import { Header, Footer } from 'components'
 import './app.less'
 
-const App = () => {
-  const { children } = this.props.children
+const App = (props) => {
+  const { children } = props
 
   return (
     <div>
       <div id="app">
         <Header />
-          {children}
+        {children}
         <Footer />
       </div>
       <DevTools />
@@ -21,7 +21,7 @@ const App = () => {
 }
 
 App.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.element,
 }
 
 export default App

@@ -13,7 +13,7 @@
     "ES6",
     "Babel",
     "Eslint",
-    "LESS",
+    "LESS"
   ],
   "main": "index.js",
   "scripts": {
