@@ -12,7 +12,7 @@
     "Webpack",
     "ES6",
     "Babel",
-    "Eslint",
+    "eSlint",
     "LESS"
   ],
   "main": "index.js",
