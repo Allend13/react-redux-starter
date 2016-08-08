@@ -1,8 +1,40 @@
-import appDev from './app.dev'
-import appProd from './app.prod'
+import React, { PropTypes } from 'react'
+// import { bindActionCreators } from 'redux'
+// import { connect } from 'react-redux'
+import { Header, Footer, DevTools } from 'components'
+import './app.less'
 
-if (process.env.NODE_ENV === 'production') {
-  module.exports = appProd
-} else {
-  module.exports = appDev
+const isProd = process.env.NODE_ENV === 'production'
+
+const App = (props) => {
+  const { children } = props
+
+  return (
+    <div>
+      <div id="app">
+        <Header />
+        {children}
+        <Footer />
+      </div>
+      {!isProd && <DevTools />}
+    </div>
+  )
 }
+
+App.propTypes = {
+  children: PropTypes.element,
+}
+
+export default App
+
+// function mapStateToProps(state) {
+//   return {
+//   }
+// }
+//
+// function mapDispatchToProps(dispatch) {
+//   return {
+//   }
+// }
+//
+// export default connect(mapStateToProps, mapDispatchToProps)(App)
