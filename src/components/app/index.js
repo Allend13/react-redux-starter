@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 // import { bindActionCreators } from 'redux'
 // import { connect } from 'react-redux'
-import { Header, Footer, DevTools } from 'components'
+import { Header, Footer, Devtools } from 'components'
 import './app.less'
 
 const isProd = process.env.NODE_ENV === 'production'
@@ -16,7 +16,7 @@ const App = (props) => {
         {children}
         <Footer />
       </div>
-      {!isProd && <DevTools />}
+      {!isProd && <Devtools />}
     </div>
   )
 }

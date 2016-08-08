@@ -13,7 +13,8 @@
     "ES6",
     "Babel",
     "eSlint",
-    "LESS"
+    "LESS",
+    "Airbnb config"
   ],
   "main": "index.js",
   "scripts": {
