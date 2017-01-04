@@ -41,7 +41,8 @@ export default new Config().merge({
     }),
 
     new HtmlWebpackPlugin({
-      template: Path.resolve(__dirname, 'index.html'),
+      title: process.env.APP_TITLE || 'Title',
+      template: Path.resolve(__dirname, 'index.ejs'),
       inject: 'body',
       hash: true,
     }),
