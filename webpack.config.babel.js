@@ -1,12 +1,16 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { optimize, HotModuleReplacementPlugin } from 'webpack'
+import { optimize, HotModuleReplacementPlugin, DefinePlugin } from 'webpack'
+import Dotenv from 'dotenv'
 import Config from 'webpack-config'
 import Path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import Autoprefixer from 'autoprefixer'
 
+Dotenv.config()
+
 export default new Config().merge({
   module: {
+
     preLoaders: [
       {
         test: /\.js$/,
@@ -16,6 +20,7 @@ export default new Config().merge({
         ],
       },
     ],
+
     loaders: [
       {
         test: /\.js?$/,
@@ -31,6 +36,10 @@ export default new Config().merge({
   },
 
   plugins: [
+    new DefinePlugin({
+      APP_API_HOST: JSON.stringify(process.env.APP_API_HOST),
+    }),
+
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, 'index.html'),
       inject: 'body',

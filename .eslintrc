@@ -28,5 +28,8 @@
           "config": "./webpack.config.babel.js"
         }
     }
+  },
+  "globals": {
+    "APP_API_HOST": true
   }
 }
