@@ -9,7 +9,7 @@ const router = routerMiddleware(browserHistory)
 
 const enhancer = compose(
   applyMiddleware(thunk, router),
-  DevTools.instrument()
+  DevTools.instrument(),
 )
 
 export default function configureStore() {
