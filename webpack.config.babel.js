@@ -54,6 +54,7 @@ export default new Config().merge({
       Path.resolve('src'),
     ],
     alias: {
+      node_modules: Path.resolve(__dirname, 'node_modules'),
       less: Path.resolve(__dirname, 'src/less/'),
       components: Path.resolve(__dirname, 'src/components/'),
       actions: Path.resolve(__dirname, 'src/actions/'),

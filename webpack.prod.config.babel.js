@@ -18,7 +18,7 @@ export default new Config().extend('webpack.config.babel.js').merge({
   module: {
     loaders: [
       {
-        test: /\.less$/,
+        test: /\.(less|css)$/,
         include: Path.join(__dirname, 'src'),
         loader: ExtractTextPlugin.extract('css!postcss!less'),
       },

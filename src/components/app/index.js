@@ -1,6 +1,4 @@
 import React, { PropTypes } from 'react'
-// import { bindActionCreators } from 'redux'
-// import { connect } from 'react-redux'
 import { Header, Footer, Devtools } from 'components'
 import './app.less'
 
@@ -11,7 +9,7 @@ const App = (props) => {
 
   return (
     <div>
-      <div id="app">
+      <div className="app">
         <Header />
         {children}
         <Footer />
@@ -26,15 +24,3 @@ App.propTypes = {
 }
 
 export default App
-
-// function mapStateToProps(state) {
-//   return {
-//   }
-// }
-//
-// function mapDispatchToProps(dispatch) {
-//   return {
-//   }
-// }
-//
-// export default connect(mapStateToProps, mapDispatchToProps)(App)

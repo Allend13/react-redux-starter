@@ -64,6 +64,7 @@
   "dependencies": {
     "axios": "^0.15.2",
     "classnames": "^2.2.3",
+    "normalize.css": "^5.0.0",
     "react": "^15.4.1",
     "react-addons-css-transition-group": "^15.0.1",
     "react-dom": "^15.0.1",
