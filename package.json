@@ -20,17 +20,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo 'No tests at the moment' && exit 0",
-    "start": "webpack-dev-server -d --config webpack.dev.config.js",
-    "build": "webpack --config webpack.prod.config.js",
-    "profile": "webpack --config webpack.prod.config.js --profile --json > profiling.json"
+    "start": "webpack-dev-server -d --config webpack.dev.config.babel.js",
+    "build": "webpack --config webpack.prod.config.babel.js",
+    "profile": "webpack --config webpack.prod.config.babel.js --profile --json > profiling.json"
   },
   "author": "Eugene Allenov",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.3.5",
-    "babel-core": "^6.4.5",
+    "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.0",
     "babel-loader": "^6.2.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
@@ -57,6 +58,7 @@
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.12",
+    "webpack-config": "^6.2.1",
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
