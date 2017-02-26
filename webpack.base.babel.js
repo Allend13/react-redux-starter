@@ -1,36 +1,36 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { optimize, HotModuleReplacementPlugin, DefinePlugin } from 'webpack'
+import { DefinePlugin, optimize } from 'webpack'
 import Dotenv from 'dotenv'
-import Config from 'webpack-config'
 import Path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
-import Autoprefixer from 'autoprefixer'
 
 Dotenv.config()
 
-export default new Config().merge({
+const appPath = Path.resolve(__dirname, 'src')
+
+module.exports = {
+
   module: {
-
-    preLoaders: [
+    rules: [
       {
+        enforce: 'pre',
         test: /\.js$/,
-        loaders: ['eslint'],
-        include: [
-          Path.resolve(__dirname, 'src'),
-        ],
+        loader: 'eslint-loader',
+        include: [appPath],
       },
-    ],
-
-    loaders: [
       {
         test: /\.js?$/,
-        include: Path.join(__dirname, 'src'),
-        loaders: ['babel'],
+        loader: 'babel-loader',
+        include: [appPath],
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg)$/,
-        include: Path.join(__dirname, 'src'),
-        loader: 'url-loader?limit=5120&name=/img/[name].[ext]',
+        include: [appPath],
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: '/img/[name].[ext]',
+        },
       },
     ],
   },
@@ -49,28 +49,25 @@ export default new Config().merge({
 
     new optimize.CommonsChunkPlugin({
       name: 'vendor',
-      filename: 'js/libraries.js',
-      minChunks: () => module.resource && module.resource.indexOf(Path.resolve(__dirname, 'src')) === -1,
+      filename: 'js/vendor.js',
+      minChunks: module => module.resource && (/node_modules/).test(module.resource),
     }),
-
-    new HotModuleReplacementPlugin(),
   ],
 
-  postcss: () => [Autoprefixer],
-
   resolve: {
-    root: [
+    modules: [
       Path.resolve('node_modules'),
-      Path.resolve('src'),
+      appPath,
     ],
+
     alias: {
-      node_modules: Path.resolve(__dirname, 'node_modules'),
-      less: Path.resolve(__dirname, 'src/less/'),
       components: Path.resolve(__dirname, 'src/components/'),
+      routes: Path.resolve(__dirname, 'src/routes/'),
       actions: Path.resolve(__dirname, 'src/actions/'),
       constants: Path.resolve(__dirname, 'src/constants/'),
       reducers: Path.resolve(__dirname, 'src/reducers/'),
-      routes: Path.resolve(__dirname, 'src/routes/'),
+      less: Path.resolve(__dirname, 'src/less/'),
+      node: Path.resolve(__dirname, 'node_modules'),
     },
   },
-});
+};

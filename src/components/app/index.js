@@ -1,8 +1,6 @@
 import React, { PropTypes } from 'react'
-import { Header, Footer, Devtools } from 'components'
+import { Header, Footer } from 'components'
 import './app.less'
-
-const isProd = process.env.NODE_ENV === 'production'
 
 const App = (props) => {
   const { children } = props
@@ -14,13 +12,12 @@ const App = (props) => {
         {children}
         <Footer />
       </div>
-      {!isProd && <Devtools />}
     </div>
   )
 }
 
 App.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.element.isRequired,
 }
 
 export default App
