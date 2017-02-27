@@ -17,6 +17,9 @@ module.exports = {
         test: /\.js$/,
         loader: 'eslint-loader',
         include: [appPath],
+        options: {
+          emitError: false,
+        },
       },
       {
         test: /\.js?$/,
