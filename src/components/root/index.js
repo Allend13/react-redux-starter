@@ -13,10 +13,6 @@ const Root = (props) => {
   )
 }
 
-if (module.hot) {
-  module.hot.accept()
-}
-
 Root.propTypes = {
   history: PropTypes.object.isRequired,
   store: PropTypes.object.isRequired,
