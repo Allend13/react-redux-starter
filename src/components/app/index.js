@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { Header, Footer } from 'components'
+import { Header } from 'components'
 import './app.less'
 
 const App = (props) => {
@@ -10,7 +10,6 @@ const App = (props) => {
       <div className="app">
         <Header />
         {children}
-        <Footer />
       </div>
     </div>
   )
