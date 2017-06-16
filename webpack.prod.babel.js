@@ -28,6 +28,11 @@ export default new Config().extend('webpack.base.babel.js').merge({
           use: [
             {
               loader: 'css-loader',
+              options: {
+                modules: true,
+                camelCase: true,
+                localIdentName: '[folder]_[local]-[hash:base64:5]',
+              },
             },
             {
               loader: 'postcss-loader',
