@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './header.less'
+import styles from './styles.less'
 
 const Header = () =>
   <div className={styles.root} />
