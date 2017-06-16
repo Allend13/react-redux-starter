@@ -42,6 +42,9 @@ export default new Config().extend('webpack.base.babel.js').merge({
             loader: 'css-loader',
             options: {
               sourceMap: true,
+              modules: true,
+              camelCase: true,
+              localIdentName: '[folder]__[local]--[hash:base64:5]',
             },
           },
           {

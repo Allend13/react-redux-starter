@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Header } from 'components'
-import './app.less'
+import styles from './app.less'
 
 const App = (props) => {
   const { children } = props
 
   return (
     <div>
-      <div className="app">
+      <div className={styles.root}>
         <Header />
         {children}
       </div>
