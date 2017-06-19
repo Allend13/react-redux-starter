@@ -1,15 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { DefinePlugin, optimize } from 'webpack'
-import Dotenv from 'dotenv'
+import { optimize } from 'webpack'
 import Path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
-
-Dotenv.config()
 
 const appPath = Path.resolve(__dirname, 'src')
 
 module.exports = {
-
   module: {
     rules: [
       {
@@ -30,10 +26,6 @@ module.exports = {
   },
 
   plugins: [
-    new DefinePlugin({
-      APP_API_HOST: JSON.stringify(process.env.APP_API_HOST),
-    }),
-
     new HtmlWebpackPlugin({
       title: process.env.APP_TITLE || 'Title',
       template: Path.resolve(__dirname, 'index.ejs'),
