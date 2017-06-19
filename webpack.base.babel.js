@@ -10,8 +10,15 @@ module.exports = {
     rules: [
       {
         test: /\.js?$/,
-        loader: 'babel-loader',
         include: [appPath],
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+          {
+            loader: 'eslint-loader',
+          },
+        ],
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg)$/,
