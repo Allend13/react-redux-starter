@@ -23,13 +23,8 @@
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   },
   "settings": {
-      "import/resolver": {
-        "webpack": {
-          "config": "./webpack.base.babel.js"
-        }
+    "import/resolver": {
+      "babel-module": {}
     }
-  },
-  "globals": {
-    "APP_API_HOST": true
   }
 }
