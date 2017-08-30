@@ -4,7 +4,8 @@ import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { browserHistory } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux'
-import 'less/master.less'
+
+import './less/master.less'
 import Root from './components/root'
 import configureStore from './store/configureStore'
 

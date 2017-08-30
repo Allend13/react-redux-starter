@@ -1,12 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { DefinePlugin } from 'webpack'
 import Config from 'webpack-config'
-import Path from 'path'
+import { resolve } from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import CleanWebpackPlugin from 'clean-webpack-plugin'
 import Autoprefixer from 'autoprefixer'
 
-const appPath = Path.resolve(__dirname, 'src')
+const appPath = resolve(__dirname, 'src')
 
 export default new Config().extend('webpack.base.babel.js').merge({
 
@@ -14,7 +14,7 @@ export default new Config().extend('webpack.base.babel.js').merge({
 
   output: {
     filename: 'js/app.js',
-    path: Path.resolve(__dirname, 'build'),
+    path: resolve(__dirname, 'build'),
     publicPath: '/',
   },
 
@@ -42,6 +42,9 @@ export default new Config().extend('webpack.base.babel.js').merge({
             },
             {
               loader: 'less-loader',
+              options: {
+                paths: [resolve(__dirname, 'src/less')],
+              },
             },
           ],
           publicPath: '/build',
@@ -62,7 +65,7 @@ export default new Config().extend('webpack.base.babel.js').merge({
     }),
 
     new CleanWebpackPlugin(['build'], {
-      root: Path.resolve(__dirname),
+      root: resolve(__dirname),
       verbose: true,
       dry: false,
     }),

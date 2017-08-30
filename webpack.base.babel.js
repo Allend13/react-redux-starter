@@ -52,15 +52,5 @@ module.exports = {
       Path.resolve('node_modules'),
       appPath,
     ],
-
-    alias: {
-      components: Path.resolve(__dirname, 'src/components/'),
-      routes: Path.resolve(__dirname, 'src/routes/'),
-      actions: Path.resolve(__dirname, 'src/actions/'),
-      constants: Path.resolve(__dirname, 'src/constants/'),
-      reducers: Path.resolve(__dirname, 'src/reducers/'),
-      less: Path.resolve(__dirname, 'src/less/'),
-      node: Path.resolve(__dirname, 'node_modules'),
-    },
   },
 };

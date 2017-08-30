@@ -6,6 +6,19 @@
   ],
   "plugins": [
     "react-hot-loader/babel",
-    "transform-es2015-modules-commonjs"
+    "transform-es2015-modules-commonjs",
+    ["module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "components": "./components",
+          "routes": "./routes",
+          "actions": "./actions",
+          "constants": "./constants",
+          "reducers": "./reducers/",
+          "less": "./less"
+        }
+      }
+    ]
   ]
 }

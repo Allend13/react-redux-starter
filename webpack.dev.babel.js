@@ -1,10 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import Config from 'webpack-config'
 import { HotModuleReplacementPlugin, NamedModulesPlugin } from 'webpack'
-import Path from 'path'
+import { resolve } from 'path'
 import Autoprefixer from 'autoprefixer'
 
-const appPath = Path.resolve(__dirname, 'src')
+const appPath = resolve(__dirname, 'src')
 
 export default new Config().extend('webpack.base.babel.js').merge({
 
@@ -57,6 +57,7 @@ export default new Config().extend('webpack.base.babel.js').merge({
           {
             loader: 'less-loader',
             options: {
+              paths: [resolve(__dirname, 'src/less')],
               sourceMap: true,
             },
           },
