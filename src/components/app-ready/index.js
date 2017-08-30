@@ -1,8 +1,9 @@
 import React from 'react'
+import Content from './content'
 
 const AppReady = () => (
   <div className="dummy-component text-center">
-    <h1>App ready!</h1>
+    <Content />
   </div>
 )
 
