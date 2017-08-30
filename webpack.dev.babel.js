@@ -51,6 +51,7 @@ export default new Config().extend('webpack.base.babel.js').merge({
             loader: 'postcss-loader',
             options: {
               plugins: () => [Autoprefixer],
+              sourceMap: true,
             },
           },
           {
