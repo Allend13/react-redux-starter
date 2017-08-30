@@ -1,15 +1,20 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Route } from 'react-router'
 import { Provider } from 'react-redux'
-import Routes from 'routes'
+import { ConnectedRouter } from 'react-router-redux'
+
+import { App } from 'components'
 
 const Root = (props) => {
   const { store, history } = props
 
   return (
     <Provider store={store}>
-      <Routes history={history} />
+      <ConnectedRouter history={history}>
+        <Route path="/" component={App} />
+      </ConnectedRouter>
     </Provider>
   )
 }

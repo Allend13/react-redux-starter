@@ -3,9 +3,11 @@ import reducers from 'reducers'
 import thunk from 'redux-thunk'
 import { createLogger } from 'redux-logger'
 import { routerMiddleware } from 'react-router-redux'
-import { browserHistory } from 'react-router'
+import createHistory from 'history/createBrowserHistory'
 
-const router = routerMiddleware(browserHistory)
+const history = createHistory()
+
+const router = routerMiddleware(history)
 const logger = createLogger({ timestamp: false });
 
 const enhancer = compose(

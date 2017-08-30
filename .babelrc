@@ -12,7 +12,6 @@
         "root": ["./src"],
         "alias": {
           "components": "./components",
-          "routes": "./routes",
           "actions": "./actions",
           "constants": "./constants",
           "reducers": "./reducers/",

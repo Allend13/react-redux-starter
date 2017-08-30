@@ -1,22 +1,14 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
+import Routes from './routes'
 import styles from './styles.less'
 
-const App = (props) => {
-  const { children } = props
-
-  return (
-    <div>
-      <div className={styles.root}>
-        {children}
-      </div>
+const App = () => (
+  <div>
+    <div className={styles.root}>
+      <Routes />
     </div>
-  )
-}
-
-App.propTypes = {
-  children: PropTypes.element.isRequired,
-}
+  </div>
+)
 
 export default App

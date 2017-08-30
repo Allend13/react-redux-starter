@@ -1,16 +1,13 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Router, Route, IndexRoute } from 'react-router'
-import { App, AppReady, NotFound } from 'components'
+import { ConnectedRouter, Route } from 'react-router'
+import { App } from 'components'
 
 const Routes = props => (
-  <Router history={props.history}>
-    <Route path="/" component={App} >
-      <IndexRoute component={AppReady} />
-    </Route>
-    <Route path="*" component={NotFound} status={404} />
-  </Router>
+  <ConnectedRouter history={props.history}>
+    <Route path="/" component={App} />
+  </ConnectedRouter>
 )
 
 Routes.propTypes = {

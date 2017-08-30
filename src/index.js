@@ -2,8 +2,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import { browserHistory } from 'react-router'
-import { syncHistoryWithStore } from 'react-router-redux'
+import createHistory from 'history/createBrowserHistory'
 
 import './less/master.less'
 import Root from './components/root'
@@ -11,7 +10,7 @@ import configureStore from './store/configureStore'
 
 const rootEl = document.getElementById('root')
 const store = configureStore()
-const history = syncHistoryWithStore(browserHistory, store)
+const history = createHistory()
 
 render(
   <AppContainer>
