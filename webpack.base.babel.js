@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { optimize, SourceMapDevToolPlugin } from 'webpack'
+import { optimize } from 'webpack'
 import Path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
