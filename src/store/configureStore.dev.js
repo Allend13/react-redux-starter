@@ -8,7 +8,7 @@ import reducers from 'redux-modules'
 const history = createHistory()
 
 const router = routerMiddleware(history)
-const logger = createLogger({ timestamp: false, collapsed: true });
+const logger = createLogger({ timestamp: false, collapsed: true })
 
 const enhancer = compose(
   applyMiddleware(thunk, router, logger),

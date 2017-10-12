@@ -70,4 +70,4 @@ export default new Config().extend('webpack.base.babel.js').merge({
     new NamedModulesPlugin(),
   ],
 
-});
+})
