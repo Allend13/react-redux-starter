@@ -1,12 +1,13 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ConnectedRouter, Route } from 'react-router'
-import { App } from 'components'
+import { ConnectedRouter } from 'react-router-redux'
+import { Route } from 'react-router-dom'
+import AppContainer from 'containers/app'
 
 const Routes = props => (
   <ConnectedRouter history={props.history}>
-    <Route path="/" component={App} />
+    <Route path="/" component={AppContainer} />
   </ConnectedRouter>
 )
 

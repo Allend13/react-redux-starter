@@ -12,9 +12,8 @@
         "root": ["./src"],
         "alias": {
           "components": "./components",
-          "actions": "./actions",
-          "constants": "./constants",
-          "reducers": "./reducers/",
+          "containers": "./containers",
+          "redux-modules": "./redux-modules",
           "less": "./less"
         }
       }
