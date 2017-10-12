@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import Config from 'webpack-config'
-import { HotModuleReplacementPlugin, NamedModulesPlugin } from 'webpack'
+import { HotModuleReplacementPlugin, NamedModulesPlugin, SourceMapDevToolPlugin } from 'webpack'
 import { resolve } from 'path'
 import Autoprefixer from 'autoprefixer'
 
@@ -19,8 +19,6 @@ export default new Config().extend('webpack.base.babel.js').merge({
     filename: 'app.js',
     publicPath: '/',
   },
-
-  devtool: 'cheap-eval-source-map',
 
   devServer: {
     contentBase: appPath,
@@ -67,6 +65,7 @@ export default new Config().extend('webpack.base.babel.js').merge({
   },
 
   plugins: [
+    new SourceMapDevToolPlugin(),
     new HotModuleReplacementPlugin(),
     new NamedModulesPlugin(),
   ],

@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { optimize } from 'webpack'
+import { optimize, SourceMapDevToolPlugin } from 'webpack'
 import Path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
@@ -14,9 +14,6 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader',
-          },
-          {
-            loader: 'eslint-loader',
           },
         ],
       },
