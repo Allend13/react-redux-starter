@@ -1,11 +1,4 @@
-import App from './app'
-import Root from './root'
-import AppReady from './app-ready'
-import SecondPage from './second-page'
-
-export {
-  App,
-  Root,
-  AppReady,
-  SecondPage,
-}
+export { default as App } from './app'
+export { default as Root } from './root'
+export { default as AppReady } from './app-ready'
+export { default as SecondPage } from './second-page'
