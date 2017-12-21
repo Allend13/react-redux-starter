@@ -21,7 +21,7 @@
   "scripts": {
     "test": "echo 'No tests at the moment' && exit 0",
     "start": "webpack-dev-server --config webpack.dev.babel.js",
-    "build": "webpack -p --config webpack.prod.babel.js"
+    "build": "cross-env NODE_ENV=production  webpack -p --config webpack.prod.babel.js"
   },
   "author": "Eugene Allenov",
   "license": "MIT",
@@ -63,6 +63,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "classnames": "^2.2.5",
+    "cross-env": "^5.1.2",
     "history": "^4.7.2",
     "prop-types": "^15.5.10",
     "react": "^16.0.0",
