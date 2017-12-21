@@ -1,13 +1,3 @@
-import React from 'react'
-import Routes from './routes'
-import styles from './styles.less'
+import Component from './app.container'
 
-const App = () => (
-  <div>
-    <div className={styles.root}>
-      <Routes />
-    </div>
-  </div>
-)
-
-export default App
+export default Component

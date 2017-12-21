@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { App } from 'components'
+
 import * as exampleReduxModuleActiuons from 'redux-modules/exampleReduxModule'
+import App from './app.component'
 
 class AppContainer extends Component {
   componentDidMount() {
