@@ -22,6 +22,7 @@ export default new Config().extend('webpack.base.babel.js').merge({
     contentBase: appPath,
     historyApiFallback: true,
     hot: true,
+    noInfo: true,
     stats: {
       colors: true,
     },
