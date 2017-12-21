@@ -9,8 +9,8 @@ import Root from './components/root'
 import configureStore from './store/configureStore'
 
 const rootEl = document.getElementById('root')
-const store = configureStore()
 const history = createHistory()
+const store = configureStore(history)
 
 render(
   <AppContainer>
