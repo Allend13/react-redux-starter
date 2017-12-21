@@ -4,6 +4,7 @@ import Path, { resolve } from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import Autoprefixer from 'autoprefixer'
+import ProgressBarPlugin from 'progress-bar-webpack-plugin'
 
 const appPath = Path.resolve(__dirname, 'src')
 const isProd = process.env.NODE_ENV === 'production'
@@ -67,6 +68,8 @@ module.exports = {
   },
 
   plugins: [
+    new ProgressBarPlugin(),
+
     new HtmlWebpackPlugin({
       title: process.env.APP_TITLE || 'Title',
       template: Path.resolve(__dirname, 'index.ejs'),
