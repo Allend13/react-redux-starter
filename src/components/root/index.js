@@ -1,6 +1,7 @@
-/* eslint-disable react/forbid-prop-types */
+/* eslint-disable react/forbid-prop-types, import/no-extraneous-dependencies */
 import React from 'react'
 import PropTypes from 'prop-types'
+import { hot } from 'react-hot-loader'
 import { Provider } from 'react-redux'
 import Routes from 'routes'
 
@@ -20,4 +21,4 @@ Root.propTypes = {
   store: PropTypes.object.isRequired,
 }
 
-export default Root
+export default hot(module)(Root)

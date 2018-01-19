@@ -7,7 +7,7 @@ const appPath = resolve(__dirname, 'src')
 
 export default new Config().extend('webpack.base.babel.js').merge({
   devtool: 'cheap-module-eval-source-map',
-  
+
   entry: [
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',

@@ -12,9 +12,5 @@ export default function configureStore(history) {
   const enhancer = compose(applyMiddleware(thunk, promiseMiddleware(), router, logger))
   const store = createStore(reducers, enhancer)
 
-  if (module.hot) {
-    module.hot.accept('../redux-modules', () => store.replaceReducer(reducers))
-  }
-
   return store
 }
