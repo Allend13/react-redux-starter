@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import Config from 'webpack-config'
-import { HotModuleReplacementPlugin, NamedModulesPlugin, SourceMapDevToolPlugin } from 'webpack'
+import { HotModuleReplacementPlugin, SourceMapDevToolPlugin } from 'webpack'
 import { resolve } from 'path'
 
 const appPath = resolve(__dirname, 'src')

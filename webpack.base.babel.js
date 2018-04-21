@@ -25,7 +25,7 @@ const plugins = [
 
 if (isProd || !isInlineStyles) {
   plugins.push(new MiniCssExtractPlugin({
-    filename: `css/app${isProd && '.[contenthash:5]'}.css`,
+    filename: `css/[name]${isProd ? '.[contenthash:5]' : ''}.css`,
   }))
 }
 // END WEBPACK PLUGINS
