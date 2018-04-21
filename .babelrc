@@ -18,10 +18,11 @@
       {
         "root": ["./src"],
         "alias": {
-          "components": "./components",
-          "containers": "./containers",
-          "redux-modules": "./redux-modules",
-          "less": "./less"
+          "components": "./src/components",
+          "containers": "./src/containers",
+          "redux-modules": "./src/redux-modules",
+          "routes": "./src/routes",
+          "less": "./src/less"
         }
       }
     ]
