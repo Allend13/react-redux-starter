@@ -23,7 +23,7 @@ export default new Config().extend('webpack.base.babel.js').merge({
   },
 
   devServer: {
-    contentBase: appPath,
+    contentBase: resolve(__dirname, 'src/assets'),
     historyApiFallback: true,
     hot: true,
     stats: 'errors-only',

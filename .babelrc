@@ -21,6 +21,7 @@
           "containers": "./src/containers",
           "redux-modules": "./src/redux-modules",
           "routes": "./src/routes",
+          "assets": "./src/assets",
           "less": "./src/less"
         }
       }

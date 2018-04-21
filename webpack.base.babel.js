@@ -53,8 +53,8 @@ export default {
         include: appPath,
         loader: 'url-loader',
         options: {
-          limit: 10000,
-          name: '/img/[name].[ext]',
+          limit: 5000,
+          name: '[name].[ext]',
         },
       },
     ],
