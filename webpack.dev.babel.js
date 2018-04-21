@@ -6,6 +6,8 @@ import { resolve } from 'path'
 const appPath = resolve(__dirname, 'src')
 
 export default new Config().extend('webpack.base.babel.js').merge({
+  mode: 'development',
+
   devtool: 'cheap-module-eval-source-map',
 
   entry: [
@@ -24,15 +26,11 @@ export default new Config().extend('webpack.base.babel.js').merge({
     contentBase: appPath,
     historyApiFallback: true,
     hot: true,
-    noInfo: true,
-    stats: {
-      colors: true,
-    },
+    stats: 'errors-only',
   },
 
   plugins: [
     new SourceMapDevToolPlugin(),
     new HotModuleReplacementPlugin(),
-    new NamedModulesPlugin(),
   ],
 })
