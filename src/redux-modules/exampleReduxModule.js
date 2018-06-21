@@ -2,9 +2,9 @@ import { PENDING, FULFILLED, REJECTED } from 'redux-promise-middleware'
 import axios from 'axios'
 
 const FETCH = 'app/FETCH'
-const REQUEST = FETCH + PENDING
-const SUCCESS = FETCH + FULFILLED
-const ERROR = FETCH + REJECTED
+const REQUEST = `${FETCH}_${PENDING}`
+const SUCCESS = `${FETCH}_${FULFILLED}`
+const ERROR = `${FETCH}_${REJECTED}`
 
 const initialState = {
   data: [],
