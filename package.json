@@ -4,7 +4,7 @@
   "description": "Eugene Allenov's React/Redux/Webpack starter",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Allend13/react-redux-webpack-starter.git"
+    "url": "https://github.com/Allend13/react-redux-starter.git"
   },
   "keywords": [
     "React",
@@ -12,7 +12,7 @@
     "Webpack",
     "ES6",
     "Babel",
-    "eSlint",
+    "Eslint",
     "LESS",
     "PostCSS",
     "Airbnb config"
